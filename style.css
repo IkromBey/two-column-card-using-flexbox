@@ -1,0 +1,151 @@
+/* 1. FONT FAMILIES */
+/* 2. STARTING STYLES */
+/* 3. COLOURS */
+/* 4.BODY */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+/* 2.STARTING STYLES */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  line-height: 30px;
+}
+
+/* 3. COLOURS */
+:root {
+  --main-background: hsl(233, 47%, 7%);
+  --card-background: hsl(244, 38%, 16%);
+  --accent: hsl(277, 64%, 61%);
+  --main-heading: hsl(0, 0%, 100%);
+  --para: hsla(0, 0%, 100%, 0.75);
+  --headings: hsla(0, 0%, 100%, 0.6);
+}
+
+/* 4.BODY */
+body {
+  font-family: "Inter", sans-serif;
+  background: var(--main-background);
+  color: var(--main-heading);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  padding: 0 10px;
+}
+
+.section {
+  width: 100%;
+  max-width: 1110px;
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+}
+.card-left {
+  width: 100%;
+  max-width: 555px;
+  height: 100%;
+  max-height: 446px;
+  background: var(--card-background);
+  padding: 80px;
+}
+.card-left h1 {
+  font-weight: 700;
+  margin-bottom: 30px;
+  font-size: 36px;
+}
+
+.card-left span {
+  color: var(--accent);
+}
+
+.card-left p {
+  margin-bottom: 30px;
+  color: var(--para);
+}
+.stats {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 400px;
+}
+.stat {
+  width: 100%;
+  max-width: 83px;
+  margin-right: 80px;
+}
+.stat h2 {
+  margin-bottom: 10px;
+}
+.stat p {
+  padding: 0;
+  padding-right: 40px;
+  font-family: "Lexend Deca", sans-serif; 
+  text-transform: uppercase;
+  font-size: 12px;
+  color: var(--headings)
+}
+
+.card-right {
+  background: var(--accent);
+  width: 100%;
+  max-width: 555px;
+  height: 100%;
+  max-height: 446px;
+  overflow: hidden;
+}
+img {
+  mix-blend-mode: multiply;
+  opacity: 0.8;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+/* MEDIA QUERIES */
+
+ @media screen and (max-width: 1100px) {
+   .section {
+     flex-direction: column;
+     justify-content: none;
+     align-items: none;
+     width: 100%;
+     max-width: 555px;
+   }
+
+   .card-left {
+     text-align: center;
+     height: 100%;
+     max-height: 940px;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     padding: 60px 30px;
+   }
+   .stats {
+     display: flex;
+     flex-direction: column;
+     margin-right: none;
+     width: 100%;
+     max-width: 85px;
+     text-align: center;
+   }
+   .stat p {
+     padding-right: 0px;
+   }
+   .card-right {
+     order: -1;
+   }
+   body {
+     height: 200vh;
+   }
+ }
